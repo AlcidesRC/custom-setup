@@ -1,5 +1,4 @@
-sudo apt update -y && sudo apt upgrade -y && sudo apt install -y \
-  unzip
+sudo apt update -y && sudo apt install -y unzip
 
 mkdir -p ~/.local/share/fonts
 

@@ -1,3 +1,6 @@
+# System
+alias upgrade='sudo apt update -y && sudo apt upgrade -y && sudo snap refresh'
+
 # File system
 alias ls='eza -lh --group-directories-first --icons'
 alias lsa='ls -a'

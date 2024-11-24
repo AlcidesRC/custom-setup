@@ -1,5 +1,4 @@
-sudo apt update -y && sudo apt upgrade -y && sudo apt install -y \
-  curl
+sudo apt update -y && sudo apt install -y curl
 
 # Install Starship.rs
 curl -sS https://starship.rs/install.sh | sh -s -- --yes
