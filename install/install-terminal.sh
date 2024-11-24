@@ -11,4 +11,4 @@ echo 'eval "$(starship init bash)"' >> ~/.bashrc
 starship preset pastel-powerline -o ~/.config/starship.toml
 
 # Reload the shell
-reload-shell
+exec env -i HOME=$HOME bash -l
