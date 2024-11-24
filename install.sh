@@ -10,17 +10,17 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 
 echo -e "\n\n🔸 Setup aliases..."
-source ~/.local/share/custom-setup/install/setup-aliases.sh
+source ~/.local/share/custom-setup/setup/setup-aliases.sh
 
-echo -e "\n\n🔸 Setup git..."
-source ~/.local/share/custom-setup/install/setup-git.sh
-source ~/.local/share/custom-setup/install/install-lazygit.sh
-
-echo -e "\n\n🔸 Installing tools..."
-source ~/.local/share/custom-setup/install/install-tools.sh
+echo -e "\n\n🔸 Setup Git..."
+source ~/.local/share/custom-setup/setup/setup-git.sh
 
 echo -e "\n\n🔸 Installing Docker..."
 #source ~/.local/share/custom-setup/install/install-docker.sh
+
+echo -e "\n\n🔸 Installing tools..."
+source ~/.local/share/custom-setup/install/install-tools.sh
+source ~/.local/share/custom-setup/install/install-lazygit.sh
 source ~/.local/share/custom-setup/install/install-lazydocker.sh
 
 echo -e "\n\n🔸 Installing fonts..."
