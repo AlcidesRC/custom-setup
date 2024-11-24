@@ -2,4 +2,4 @@
 
 ln -s ~/.local/share/custom-setup/bash/aliases ~/.bash_aliases
 
-source ~/.bash_aliases
+source ~/.bashrc
