@@ -18,6 +18,9 @@ source ~/.local/share/custom-setup/setup/setup-git.sh
 echo -e "\n\n🔸 Installing Docker..."
 #source ~/.local/share/custom-setup/install/install-docker.sh
 
+echo -e "\n\n🔸 Installing Typora..."
+#source ~/.local/share/custom-setup/install/install-typora.sh
+
 echo -e "\n\n🔸 Installing tools..."
 source ~/.local/share/custom-setup/install/install-tools.sh
 source ~/.local/share/custom-setup/install/install-lazygit.sh
@@ -33,3 +36,6 @@ source ~/.local/share/custom-setup/install/install-terminal.sh
 # Revert to normal idle and lock settings
 gsettings set org.gnome.desktop.screensaver lock-enabled true
 gsettings set org.gnome.desktop.session idle-delay 300
+
+# Logout to pickup changes
+#gum confirm "Ready to reboot for all settings to take effect?" && sudo reboot
