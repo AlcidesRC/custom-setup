@@ -1,0 +1,1 @@
+ln -s ~/.local/share/custom-setup/bash/aliases ~/.bash_aliases

@@ -3,7 +3,7 @@ alias ls='eza -lh --group-directories-first --icons'
 alias lsa='ls -a'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
-alias ff="fzf --preview 'batcat --style=numbers --color=always {}'"
+alias ff='fzf --preview "batcat --style=numbers --color=always {}"'
 alias fd='fdfind'
 alias cd='z'
 
@@ -15,3 +15,10 @@ alias ....='cd ../../..'
 # Compression
 compress() { tar -czf "${1%/}.tar.gz" "${1%/}"; }
 alias decompress="tar -xzf"
+
+# Shell
+alias restart-shell='killall -SIGQUIT gnome-shell'
+alias reload-shell='exec env -i HOME=$HOME bash -l'
+
+# Docker
+alias docker-stop-all='docker stop $(docker ps -a -q)'
