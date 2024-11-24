@@ -9,6 +9,12 @@ gsettings set org.gnome.desktop.screensaver lock-enabled false
 gsettings set org.gnome.desktop.session idle-delay 0
 
 
+echo -e "\n\n🔸 Installing fonts..."
+source ~/.local/share/custom-setup/install/install-fonts.sh
+
+echo -e "\n\n🔸 Setup Gnome settings..."
+source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
+
 echo -e "\n\n🔸 Setup aliases..."
 source ~/.local/share/custom-setup/setup/setup-aliases.sh
 
@@ -25,9 +31,6 @@ echo -e "\n\n🔸 Installing tools..."
 source ~/.local/share/custom-setup/install/install-tools.sh
 source ~/.local/share/custom-setup/install/install-lazygit.sh
 source ~/.local/share/custom-setup/install/install-lazydocker.sh
-
-echo -e "\n\n🔸 Installing fonts..."
-source ~/.local/share/custom-setup/install/install-fonts.sh
 
 echo -e "\n\n🔸 Installing terminal..."
 source ~/.local/share/custom-setup/install/install-terminal.sh
