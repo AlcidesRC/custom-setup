@@ -19,7 +19,7 @@ echo -e "\n\n🔸 Installing Docker..."
 #source ~/.local/share/custom-setup/install/install-docker.sh
 
 echo -e "\n\n🔸 Installing Typora..."
-#source ~/.local/share/custom-setup/install/install-typora.sh
+source ~/.local/share/custom-setup/install/install-typora.sh
 
 echo -e "\n\n🔸 Installing tools..."
 source ~/.local/share/custom-setup/install/install-tools.sh
