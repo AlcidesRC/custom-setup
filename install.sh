@@ -9,6 +9,12 @@ gsettings set org.gnome.desktop.screensaver lock-enabled false
 gsettings set org.gnome.desktop.session idle-delay 0
 
 
+echo -e "\n\n🔸 Installing tools..."
+source ~/.local/share/custom-setup/install/install-tools.sh
+
+echo -e "\n\n🔸 Installing aliases..."
+source ~/.local/share/custom-setup/install/install-aliases.sh
+
 echo -e "\n\n🔸 Installing fonts..."
 source ~/.local/share/custom-setup/install/install-fonts.sh
 
