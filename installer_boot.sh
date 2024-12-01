@@ -26,12 +26,7 @@ sudo apt-get update >/dev/null && sudo apt-get install -y git >/dev/null
 
 echo -e "\n\n🔸 Cloning Custom Setup..."
 rm -rf ~/.local/share/custom-setup
-git clone https://github.com/AlcidesRC/custom-setup.git ~/.local/share/custom-setup >/dev/null
-if [[ $CUSTOM_SETUP_REF != "main" ]]; then
-	cd ~/.local/share/custom-setup
-	git fetch origin "${CUSTOM_SETUP_REF:-stable}" && git checkout "${CUSTOM_SETUP_REF:-stable}" >/dev/null
-	cd -
-fi
+git clone --quiet https://github.com/AlcidesRC/custom-setup.git ~/.local/share/custom-setup >/dev/null
 
 echo -e "\n\n🔸 Installation starting..."
 source ~/.local/share/custom-setup/install.sh
