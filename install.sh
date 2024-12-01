@@ -22,7 +22,7 @@ echo -e "\n\n🔸 Setup aliases..."
 source ~/.local/share/custom-setup/setup/setup-aliases.sh
 
 echo -e "\n\n🔸 Setup Git..."
-source ~/.local/share/custom-setup/setup/setup-terminal.sh
+source ~/.local/share/custom-setup/setup/setup-git.sh
 
 #---
 
