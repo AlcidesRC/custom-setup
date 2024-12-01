@@ -30,9 +30,8 @@ gum confirm "Do you want to install fonts?" && source ~/.local/share/custom-setu
 
 choices=$(gum choose --no-limit "LazyGit" "LazyDocker" "Docker" "Typora" "Starship Terminal" --header "Choose your preferred application...")
 
-echo $choices;
-
-for choice in choices ; do
+for choice in $choices
+do
   case $choice in
   "LazyGit")
     source ~/.local/share/custom-setup/tools/lazygit/install.sh
