@@ -21,12 +21,12 @@ gum style \
 
 gum spin --spinner dot --title "🔹 Begin installation (or abort with ctrl+c)..." -- sleep 5
 
-echo -e "\n\n🔸 Installing Git tool..."
+echo -e "\n🔸 Installing Git tool..."
 sudo apt-get update >/dev/null && sudo apt-get install -y git >/dev/null
 
-echo -e "\n\n🔸 Cloning Custom Setup..."
+echo -e "\n🔸 Cloning Custom Setup..."
 rm -rf ~/.local/share/custom-setup
 git clone --quiet https://github.com/AlcidesRC/custom-setup.git ~/.local/share/custom-setup >/dev/null
 
-echo -e "\n\n🔸 Installation starting..."
+echo -e "\n🔸 Installation starting..."
 source ~/.local/share/custom-setup/install.sh
