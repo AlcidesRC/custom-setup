@@ -1,0 +1,1 @@
+source ~/.local/share/custom-setup/defaults/bash/shell
