@@ -16,7 +16,7 @@ gum confirm "Do you want to install OS-related tools?" && source ~/.local/share/
 
 gum confirm "Do you want to setup Gnome settings?" && source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
 
-gum confirm "Do you want to setup shell?" &&  ~/.local/share/custom-setup/setup/setup-shell.sh
+gum confirm "Do you want to setup shell?" && source ~/.local/share/custom-setup/setup/setup-shell.sh
 
 gum confirm "Do you want to setup bash aliases?" && source ~/.local/share/custom-setup/setup/setup-aliases.sh
 
