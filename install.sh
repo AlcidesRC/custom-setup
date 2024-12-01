@@ -13,9 +13,6 @@ gsettings set org.gnome.desktop.session idle-delay 0
 echo -e "\n\n🔸 Installing OS-related tools..."
 source ~/.local/share/custom-setup/tools/os-related/install.sh
 
-echo -e "\n\n🔸 Installing Gum..."
-source ~/.local/share/custom-setup/tools/gum/install.sh
-
 #---
 
 echo -e "\n\n🔸 Setup Gnome settings..."
@@ -35,20 +32,31 @@ source ~/.local/share/custom-setup/setup/setup-git.sh
 echo -e "\n\n🔸 Installing Fonts..."
 source ~/.local/share/custom-setup/tools/fonts/install.sh
 
-echo -e "\n\n🔸 Installing Typora..."
-source ~/.local/share/custom-setup/tools/typora/install.sh
-
 echo -e "\n\n🔸 Installing LazyGit..."
-source ~/.local/share/custom-setup/tools/lazygit/install.sh
+source
 
-#echo -e "\n\n🔸 Installing Docker..."
-#source ~/.local/share/custom-setup/tools/docker/install.sh
+#---
 
-echo -e "\n\n🔸 Installing LazyDocker..."
-source ~/.local/share/custom-setup/tools/lazydocker/install.sh
+choice=$(gum choose "LazyGit" "LazyDocker" "Docker" "Typora" "Starship Terminal" --header "\n\n🔸 Installing additional software...")
 
-echo -e "\n\n🔸 Installing Starship terminal..."
-source ~/.local/share/custom-setup/tools/terminal/install.sh
+case $choice in
+"LazyGit")
+  source ~/.local/share/custom-setup/tools/lazygit/install.sh
+	;;
+"LazyDocker")
+  source ~/.local/share/custom-setup/tools/lazydocker/install.sh
+	;;
+"Docker")
+  source ~/.local/share/custom-setup/tools/docker/install.sh
+  source ~/.local/share/custom-setup/tools/lazydocker/install.sh
+	;;
+"Typora")
+  source ~/.local/share/custom-setup/tools/typora/install.sh
+	;;
+"Starthip Terminal")
+  source ~/.local/share/custom-setup/tools/terminal/install.sh
+	;;
+esac
 
 #---
 
@@ -57,4 +65,4 @@ gsettings set org.gnome.desktop.screensaver lock-enabled true
 gsettings set org.gnome.desktop.session idle-delay 300
 
 # Logout to pickup changes
-#gum confirm "Ready to reboot for all settings to take effect?" && sudo reboot
+gum confirm "Ready to reboot for all settings to take effect?" && sudo reboot
