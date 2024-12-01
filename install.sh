@@ -18,6 +18,9 @@ source ~/.local/share/custom-setup/tools/fonts/install.sh
 echo -e "\n\n🔸 Setup Gnome settings..."
 source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
 
+echo -e "\n\n🔸 Setup shell..."
+source ~/.local/share/custom-setup/setup/setup-shell.sh
+
 echo -e "\n\n🔸 Setup aliases..."
 source ~/.local/share/custom-setup/setup/setup-aliases.sh
 
@@ -37,6 +40,9 @@ source ~/.local/share/custom-setup/tools/fzf/install.sh
 
 #---
 
+echo -e "\n\n🔸 Installing Gum..."
+source ~/.local/share/custom-setup/tools/gum/install.sh
+
 echo -e "\n\n🔸 Installing Typora..."
 source ~/.local/share/custom-setup/tools/typora/install.sh
 
@@ -46,8 +52,8 @@ source ~/.local/share/custom-setup/tools/lazygit/install.sh
 #echo -e "\n\n🔸 Installing Docker..."
 #source ~/.local/share/custom-setup/tools/docker/install.sh
 
-#echo -e "\n\n🔸 Installing LazyDocker..."
-#source ~/.local/share/custom-setup/tools/lazydocker/install.sh
+echo -e "\n\n🔸 Installing LazyDocker..."
+source ~/.local/share/custom-setup/tools/lazydocker/install.sh
 
 echo -e "\n\n🔸 Installing Starship terminal..."
 source ~/.local/share/custom-setup/tools/terminal/install.sh
