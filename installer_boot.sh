@@ -9,12 +9,10 @@ echo -e "$ascii_art"
 
 #---
 
-cd /tmp
-GUM_VERSION="0.14.5" # Use known good version
-wget -qO gum.deb "https://github.com/charmbracelet/gum/releases/download/v${GUM_VERSION}/gum_${GUM_VERSION}_amd64.deb"
-sudo apt-get install -y ./gum.deb >/dev/null
-rm gum.deb
-cd -
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
+echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list >/dev/null
+sudo apt-get update >/dev/null && sudo apt-get install -y gum >/dev/null
 
 #---
 
