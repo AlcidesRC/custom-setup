@@ -34,9 +34,9 @@ source ~/.local/share/custom-setup/tools/fonts/install.sh
 
 #---
 
-echo "\n"
+echo -e "\n🔸 Installing Applications..."
 
-choice=$(gum choose "LazyGit" "LazyDocker" "Docker" "Typora" "Starship Terminal" --header "🔸 Installing additional software...")
+choice=$(gum choose "LazyGit" "LazyDocker" "Docker" "Typora" "Starship Terminal" --header "Choose your preferred application...")
 
 case $choice in
 "LazyGit")
