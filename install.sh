@@ -28,26 +28,28 @@ gum confirm "Do you want to install fonts?" && source ~/.local/share/custom-setu
 
 #---
 
-choice=$(gum choose "LazyGit" "LazyDocker" "Docker" "Typora" "Starship Terminal" --header "Choose your preferred application...")
+choices=$(gum choose --no-limit "LazyGit" "LazyDocker" "Docker" "Typora" "Starship Terminal" --header "Choose your preferred application...")
 
-case $choice in
-"LazyGit")
-  source ~/.local/share/custom-setup/tools/lazygit/install.sh
-	;;
-"LazyDocker")
-  source ~/.local/share/custom-setup/tools/lazydocker/install.sh
-	;;
-"Docker")
-  source ~/.local/share/custom-setup/tools/docker/install.sh
-  source ~/.local/share/custom-setup/tools/lazydocker/install.sh
-	;;
-"Typora")
-  source ~/.local/share/custom-setup/tools/typora/install.sh
-	;;
-"Starthip Terminal")
-  source ~/.local/share/custom-setup/tools/terminal/install.sh
-	;;
-esac
+for choice in choices ; do
+  case $choice in
+  "LazyGit")
+    source ~/.local/share/custom-setup/tools/lazygit/install.sh
+    ;;
+  "LazyDocker")
+    source ~/.local/share/custom-setup/tools/lazydocker/install.sh
+    ;;
+  "Docker")
+    source ~/.local/share/custom-setup/tools/docker/install.sh
+    source ~/.local/share/custom-setup/tools/lazydocker/install.sh
+    ;;
+  "Typora")
+    source ~/.local/share/custom-setup/tools/typora/install.sh
+    ;;
+  "Starthip Terminal")
+    source ~/.local/share/custom-setup/tools/terminal/install.sh
+    ;;
+  esac
+done
 
 #---
 
