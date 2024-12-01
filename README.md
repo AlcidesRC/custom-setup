@@ -1,1 +1,1 @@
-wget -qO- https://gist.githubusercontent.com/AlcidesRC/fd71c34e0b09bb796781717be6f06e2a/raw/ff27c90f6cf11da0696bd45289d728577011be77/installer | bash
+wget -qO- https://gist.githubusercontent.com/AlcidesRC/fd71c34e0b09bb796781717be6f06e2a/raw/4fcd4bd8b2ae6f323d3380578cb9fd2b4b95eab3/installer | bash
