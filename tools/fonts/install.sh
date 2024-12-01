@@ -17,7 +17,7 @@ set_font() {
     gsettings set org.gnome.desktop.interface monospace-font-name "$font_name 10"
 }
 
-echo "\n\n"
+echo -e "\n\n"
 
 mkdir -p ~/.local/share/fonts
 
