@@ -10,31 +10,31 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 #---
 
-echo -e "\n🔸 Installing OS-related tools..."
+echo -e "🔸 Installing OS-related tools..."
 source ~/.local/share/custom-setup/tools/os-related/install.sh
 
 #---
 
-echo -e "\n🔸 Setup Gnome settings..."
+echo -e "🔸 Setup Gnome settings..."
 source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
 
-echo -e "\n🔸 Setup shell..."
+echo -e "🔸 Setup shell..."
 source ~/.local/share/custom-setup/setup/setup-shell.sh
 
-echo -e "\n🔸 Setup aliases..."
+echo -e "🔸 Setup aliases..."
 source ~/.local/share/custom-setup/setup/setup-aliases.sh
 
-echo -e "\n🔸 Setup Git..."
+echo -e "🔸 Setup Git..."
 source ~/.local/share/custom-setup/setup/setup-git.sh
 
 #---
 
-echo -e "\n🔸 Installing Fonts..."
+echo -e "🔸 Installing Fonts..."
 source ~/.local/share/custom-setup/tools/fonts/install.sh
 
 #---
 
-echo -e "\n🔸 Installing Applications..."
+echo -e "🔸 Installing Applications..."
 
 choice=$(gum choose "LazyGit" "LazyDocker" "Docker" "Typora" "Starship Terminal" --header "Choose your preferred application...")
 
@@ -64,4 +64,4 @@ gsettings set org.gnome.desktop.screensaver lock-enabled true
 gsettings set org.gnome.desktop.session idle-delay 300
 
 # Logout to pickup changes
-gum confirm "\n🔹Ready to reboot for all settings to take effect?" && sudo reboot
+gum confirm "🔹Ready to reboot for all settings to take effect?" && sudo reboot
