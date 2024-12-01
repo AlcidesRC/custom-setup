@@ -12,7 +12,6 @@ set_font() {
         rm -rf "$file_name.zip" "$file_name"
         fc-cache
         cd -
-        clear
     fi
 
     gsettings set org.gnome.desktop.interface monospace-font-name "$font_name 10"
@@ -20,17 +19,14 @@ set_font() {
 
 mkdir -p ~/.local/share/fonts
 
-choice=$(gum choose "Fira Mono" "Caskaydia Mono" "Caskaydia Cove" "JetBrains Mono" --header "Choose your preferred programming font")
+choice=$(gum choose "Caskaydia Cove" "Fira Mono" "JetBrains Mono" --header "Choose your preferred font")
 
 case $choice in
-"Fira Mono")
-	set_font "FiraMono Nerd Font" "FiraMono" "otf" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono.zip"
-	;;
-"Caskaydia Mono")
-	set_font "CaskaydiaMono Nerd Font" "CaskaydiaMono" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/CascadiaMono.zip"
-	;;
 "Caskaydia Cove")
 	set_font "CaskaydiaCove Nerd Font" "CaskaydiaCove" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/CascadiaCode.zip"
+	;;
+"Fira Mono")
+	set_font "FiraMono Nerd Font" "FiraMono" "otf" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono.zip"
 	;;
 "JetBrains Mono")
 	set_font "JetBrainsMono Nerd Font" "JetBrainsMono" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip"

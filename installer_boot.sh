@@ -7,12 +7,15 @@ ascii_art='┏┓           ┏┓
 
 echo -e "$ascii_art"
 echo "=> Custom Setup is for fresh Ubuntu 24.04 installations only!"
-echo -e "\nBegin installation (or abort with ctrl+c)..."
+echo -e "\n\n🔹 Begin installation (or abort with ctrl+c)..."
 
+sleep 5
+
+echo -e "\n\n🔸 Installing OS-related tools..."
 sudo apt-get update >/dev/null
 sudo apt-get install -y git >/dev/null
 
-echo "Cloning Custom Setup..."
+echo -e "\n\n🔸 Cloning Custom Setup..."
 rm -rf ~/.local/share/custom-setup
 git clone https://github.com/AlcidesRC/custom-setup.git ~/.local/share/custom-setup >/dev/null
 if [[ $CUSTOM_SETUP_REF != "main" ]]; then
@@ -21,5 +24,5 @@ if [[ $CUSTOM_SETUP_REF != "main" ]]; then
 	cd -
 fi
 
-echo "Installation starting..."
+echo -e "\n\n🔸 Installation starting..."
 source ~/.local/share/custom-setup/install.sh
