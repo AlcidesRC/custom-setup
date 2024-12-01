@@ -29,7 +29,7 @@ rm -rf ~/.local/share/custom-setup
 git clone https://github.com/AlcidesRC/custom-setup.git ~/.local/share/custom-setup >/dev/null
 if [[ $CUSTOM_SETUP_REF != "main" ]]; then
 	cd ~/.local/share/custom-setup
-	git fetch origin "${CUSTOM_SETUP_REF:-stable}" && git checkout "${CUSTOM_SETUP_REF:-stable}"
+	git fetch origin "${CUSTOM_SETUP_REF:-stable}" && git checkout "${CUSTOM_SETUP_REF:-stable}" >/dev/null
 	cd -
 fi
 
