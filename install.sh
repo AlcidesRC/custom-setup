@@ -10,8 +10,11 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 #---
 
-echo -e "\n\n🔸 Installing Fonts..."
-source ~/.local/share/custom-setup/tools/fonts/install.sh
+echo -e "\n\n🔸 Installing OS-related tools..."
+source ~/.local/share/custom-setup/tools/os-related/install.sh
+
+echo -e "\n\n🔸 Installing Gum..."
+source ~/.local/share/custom-setup/tools/gum/install.sh
 
 #---
 
@@ -29,19 +32,8 @@ source ~/.local/share/custom-setup/setup/setup-git.sh
 
 #---
 
-echo -e "\n\n🔸 Installing eza..."
-source ~/.local/share/custom-setup/tools/eza/install.sh
-
-echo -e "\n\n🔸 Installing fd-find..."
-source ~/.local/share/custom-setup/tools/fd-find/install.sh
-
-echo -e "\n\n🔸 Installing fzf..."
-source ~/.local/share/custom-setup/tools/fzf/install.sh
-
-#---
-
-echo -e "\n\n🔸 Installing Gum..."
-source ~/.local/share/custom-setup/tools/gum/install.sh
+echo -e "\n\n🔸 Installing Fonts..."
+source ~/.local/share/custom-setup/tools/fonts/install.sh
 
 echo -e "\n\n🔸 Installing Typora..."
 source ~/.local/share/custom-setup/tools/typora/install.sh
