@@ -10,31 +10,23 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 #---
 
-echo -e "🔸 Installing OS-related tools..."
-source ~/.local/share/custom-setup/tools/os-related/install.sh
+gum confirm "Do you want to install OS-related tools?" && source ~/.local/share/custom-setup/tools/os-related/install.sh
 
 #---
 
-echo -e "🔸 Setup Gnome settings..."
-source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
+gum confirm "Do you want to setup Gnome settings?" && source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
 
-echo -e "🔸 Setup shell..."
-source ~/.local/share/custom-setup/setup/setup-shell.sh
+gum confirm "Do you want to setup shell?" &&  ~/.local/share/custom-setup/setup/setup-shell.sh
 
-echo -e "🔸 Setup aliases..."
-source ~/.local/share/custom-setup/setup/setup-aliases.sh
+gum confirm "Do you want to setup bash aliases?" && source ~/.local/share/custom-setup/setup/setup-aliases.sh
 
-echo -e "🔸 Setup Git..."
-source ~/.local/share/custom-setup/setup/setup-git.sh
+gum confirm "Do you want to setup Git?" && source ~/.local/share/custom-setup/setup/setup-git.sh
 
 #---
 
-echo -e "🔸 Installing Fonts..."
-source ~/.local/share/custom-setup/tools/fonts/install.sh
+gum confirm "Do you want to install fonts?" && source ~/.local/share/custom-setup/tools/fonts/install.sh
 
 #---
-
-echo -e "🔸 Installing Applications..."
 
 choice=$(gum choose "LazyGit" "LazyDocker" "Docker" "Typora" "Starship Terminal" --header "Choose your preferred application...")
 
@@ -64,4 +56,4 @@ gsettings set org.gnome.desktop.screensaver lock-enabled true
 gsettings set org.gnome.desktop.session idle-delay 300
 
 # Logout to pickup changes
-gum confirm "🔹Ready to reboot for all settings to take effect?" && sudo reboot
+gum confirm "Ready to reboot for all settings to take effect?" && sudo reboot
