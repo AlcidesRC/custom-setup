@@ -20,7 +20,7 @@ set_font() {
 
 mkdir -p ~/.local/share/fonts
 
-choice=$(gum choose "Fira Mono" "Caskaydia Mono" "JetBrains Mono" --header "Choose your preferred programming font")
+choice=$(gum choose "Fira Mono" "Caskaydia Mono" "Caskaydia Cove" "JetBrains Mono" --header "Choose your preferred programming font")
 
 case $choice in
 "Fira Mono")
@@ -28,6 +28,9 @@ case $choice in
 	;;
 "Caskaydia Mono")
 	set_font "CaskaydiaMono Nerd Font" "CaskaydiaMono" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/CascadiaMono.zip"
+	;;
+"Caskaydia Cove")
+	set_font "CaskaydiaCove Nerd Font" "CaskaydiaCove" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/CascadiaCode.zip"
 	;;
 "JetBrains Mono")
 	set_font "JetBrainsMono Nerd Font" "JetBrainsMono" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip"
