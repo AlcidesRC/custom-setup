@@ -21,13 +21,10 @@ source ~/.local/share/custom-setup/setup/setup-git.sh
 # Update OS dependency list
 sudo apt-get update >/dev/null
 
-echo -e "🔸 Installing OS-related tools..."
 source ~/.local/share/custom-setup/tools/os-related/install.sh
 
-echo -e "🔸 Installing fonts..."
 source ~/.local/share/custom-setup/tools/fonts/install.sh
 
-echo -e "🔸 Installing other tools..."
 choices=$(gum choose --no-limit "Docker" "LazyDocker" "LazyGit" "Typora" "Starship Terminal" --header "Choose your preferred application...")
 
 for choice in $choices

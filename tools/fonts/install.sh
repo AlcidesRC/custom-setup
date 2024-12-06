@@ -5,6 +5,8 @@ set_font() {
     local url=$4
 
     if ! $(fc-list | grep -i "$font_name" >/dev/null); then
+        echo -e "🔸 Installing $font_name font..."
+
         cd /tmp
         wget -O "$file_name.zip" "$url"
         unzip "$file_name.zip" -d "$file_name"
