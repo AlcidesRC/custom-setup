@@ -1,4 +1,4 @@
-# Remove any previous symbolic link if already exists
+# Remove any previous symbolic link
 [ -e ~/.bash_aliases ] && unlink ~/.bash_aliases
 
 # Create a symbolic link
