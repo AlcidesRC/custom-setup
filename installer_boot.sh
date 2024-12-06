@@ -9,8 +9,13 @@ echo -e "$ascii_art"
 
 #---
 
+# Update the OS
+sudo apt-get update >/dev/null && sudo apt-get upgrade -y >/dev/null
+
+#---
+
 echo -e "🔸 Installing Gum..."
-sudo apt-get update >/dev/null && sudo apt-get install -y curl >/dev/null
+sudo apt-get install -y curl >/dev/null
 sudo mkdir -p /etc/apt/keyrings
 curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
 echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list >/dev/null
@@ -28,7 +33,7 @@ gum spin --spinner dot --title "🔹 Begin installation (or abort with ctrl+c)..
 #---
 
 echo -e "🔸 Installing Git tool..."
-sudo apt-get update >/dev/null && sudo apt-get install -y git >/dev/null
+sudo apt-get install -y git >/dev/null
 
 echo -e "🔸 Cloning Custom Setup..."
 rm -rf ~/.local/share/custom-setup
