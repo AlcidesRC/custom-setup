@@ -38,9 +38,9 @@ echo -e "🔸 Installing Git tool..."
 sudo apt-get install -y git >/dev/null
 
 GIT_USERNAME=$(gum input --placeholder "What is your preferred user name for Git?")
-GIT_EMAIL=$(gum input --placeholder "What is your preferred email address for Git?")
-
 git config --global user.name "$GIT_USERNAME"
+
+GIT_EMAIL=$(gum input --placeholder "What is your preferred email address for Git?")
 git config --global user.email "$GIT_EMAIL"
 
 echo -e "🔸 Cloning repository..."
