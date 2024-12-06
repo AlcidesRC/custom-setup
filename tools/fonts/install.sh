@@ -21,16 +21,19 @@ set_font() {
 
 mkdir -p ~/.local/share/fonts
 
-choice=$(gum choose "Caskaydia Cove" "Fira Mono" "JetBrains Mono" --header "Choose your preferred font")
+choice=$(gum choose --no-limit "Caskaydia Cove" "Fira Mono" "JetBrains Mono" --header "Choose your preferred font")
 
-case $choice in
-"Caskaydia Cove")
-	set_font "CaskaydiaCove Nerd Font" "CaskaydiaCove" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/CascadiaCode.zip"
-	;;
-"Fira Mono")
-	set_font "FiraMono Nerd Font" "FiraMono" "otf" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono.zip"
-	;;
-"JetBrains Mono")
-	set_font "JetBrainsMono Nerd Font" "JetBrainsMono" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip"
-	;;
-esac
+for choice in $choices
+do
+  case $choice in
+  "Caskaydia Cove")
+    set_font "CaskaydiaCove Nerd Font" "CaskaydiaCove" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/CascadiaCode.zip"
+    ;;
+  "Fira Mono")
+    set_font "FiraMono Nerd Font" "FiraMono" "otf" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono.zip"
+    ;;
+  "JetBrains Mono")
+    set_font "JetBrainsMono Nerd Font" "JetBrainsMono" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip"
+    ;;
+  esac
+done
