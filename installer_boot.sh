@@ -17,7 +17,6 @@ sudo apt-get update >/dev/null && sudo apt-get upgrade -y >/dev/null
 echo -e "🔸 Installing Gum..."
 sudo apt-get install -y curl >/dev/null
 sudo mkdir -p /etc/apt/keyrings
-[ -e /etc/apt/keyrings/charm.gpg ] && sudo rm /etc/apt/keyrings/charm.gpg
 curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
 echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list >/dev/null
 sudo apt-get update >/dev/null && sudo apt-get install -y gum >/dev/null
