@@ -6,6 +6,24 @@
 gsettings set org.gnome.desktop.calendar show-weekdate true
 
 ###
+# DESKTOP RELATED
+###
+
+# Center new app windows
+gsettings set org.gnome.mutter center-new-windows true
+
+# Hide home icon in desktop
+gsettings set org.gnome.shell.extensions.ding show-home false
+
+# Set CaskaydiaCove Nerd Font Mono as the default monospace font
+gsettings set org.gnome.desktop.interface monospace-font-name 'CaskaydiaCove Nerd Font Mono 10'
+
+# Prefer dark themes
+gsettings set org.gnome.shell.ubuntu color-scheme prefer-dark
+gsettings set org.gnome.desktop.interface gtk-theme Yaru-dark
+gsettings set org.gnome.desktop.interface color-scheme prefer-dark
+
+###
 # DOCK RELATED
 ###
 
@@ -16,6 +34,9 @@ gsettings set org.gnome.shell.extensions.dash-to-dock dash-max-icon-size 48
 gsettings set org.gnome.shell.extensions.dash-to-dock transparency-mode FIXED
 gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false
 gsettings set org.gnome.shell.extensions.dash-to-dock show-favorites true
+gsettings set org.gnome.shell.extensions.dash-to-dock show-apps-at-top true
+gsettings set org.gnome.shell.extensions.dash-to-dock show-mounts false
+gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
 
 # Revert
 #gsettings reset org.gnome.shell.extensions.dash-to-dock extend-height
@@ -23,18 +44,12 @@ gsettings set org.gnome.shell.extensions.dash-to-dock show-favorites true
 #gsettings reset org.gnome.shell.extensions.dash-to-dock dash-max-icon-size
 #gsettings reset org.gnome.shell.extensions.dash-to-dock transparency-mode
 #gsettings reset org.gnome.shell.extensions.dash-to-dock dock-fixed
-#gsettings set org.gnome.shell.extensions.dash-to-dock show-favorites false
+#gsettings reset org.gnome.shell.extensions.dash-to-dock show-favorites
+#gsettings reset org.gnome.shell.extensions.dash-to-dock show-apps-at-top
+#gsettings reset org.gnome.shell.extensions.dash-to-dock show-mounts
+#gsettings reset org.gnome.shell.extensions.dash-to-dock show-trash
 
-###
-# DESKTOP RELATED
-###
-
-# Center new app windows
-gsettings set org.gnome.mutter center-new-windows true
-
-# Hide home icon in desktop
-gsettings set org.gnome.shell.extensions.ding show-home false
-
-# Set FiraCode Nerd Font Mono as the default monospace font
-gsettings set org.gnome.desktop.interface monospace-font-name 'CaskaydiaCove Nerd Font Mono 10'
+# Custom apps
+# ls /usr/share/applications/  ~/.local/share/applications/
+gsettings set org.gnome.shell favorite-apps "['snap-store_snap-store.desktop', 'org.gnome.Nautilus.desktop', 'firefox_firefox.desktop', 'phpstorm.desktop', 'LazyGit.desktop', 'LazyDocker.desktop', 'typora.desktop', 'org.gnome.Terminal.desktop']"
 

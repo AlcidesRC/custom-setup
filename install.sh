@@ -35,6 +35,7 @@ do
   case $choice in
   "PhpStorm")
     source ~/.local/share/custom-setup/tools/phpstorm/install.sh
+    source ~/.local/share/custom-setup/defaults/app-phpstorm.sh
     ;;
   "Docker")
     source ~/.local/share/custom-setup/tools/docker/install.sh
@@ -46,9 +47,6 @@ do
   "LazyGit")
     source ~/.local/share/custom-setup/tools/lazygit/install.sh
     source ~/.local/share/custom-setup/defaults/app-lazygit.sh
-    ;;
-  "LazyDocker")
-    source ~/.local/share/custom-setup/tools/lazydocker/install.sh
     ;;
   "Typora")
     source ~/.local/share/custom-setup/tools/typora/install.sh

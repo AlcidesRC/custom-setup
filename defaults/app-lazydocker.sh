@@ -1,7 +1,7 @@
 cat <<EOF >~/.local/share/applications/LazyDocker.desktop
 [Desktop Entry]
 Version=1.0
-Name=Docker
+Name=LazyDocker
 Comment=Manage Docker containers with LazyDocker
 Exec=lazydocker
 Terminal=true
