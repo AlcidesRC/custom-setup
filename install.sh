@@ -28,11 +28,14 @@ source ~/.local/share/custom-setup/setup/setup-git.sh
 
 source ~/.local/share/custom-setup/tools/os-related/install.sh
 
-choices=$(gum choose --no-limit "Docker" "LazyDocker" "LazyGit" "Typora" "Starship Terminal" --header "Choose your preferred application...")
+choices=$(gum choose --no-limit "PhpStorm" "Docker" "LazyDocker" "LazyGit" "Typora" "Starship Terminal" --header "Choose your preferred application...")
 
 for choice in $choices
 do
   case $choice in
+  "PhpStorm")
+    source ~/.local/share/custom-setup/tools/phpstorm/install.sh
+    ;;
   "Docker")
     source ~/.local/share/custom-setup/tools/docker/install.sh
     ;;
