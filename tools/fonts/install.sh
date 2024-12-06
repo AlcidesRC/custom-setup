@@ -4,6 +4,8 @@ set_font() {
     local file_type=$3
     local url=$4
     
+    echo -e "🔸 Installing $font_name font..."
+
     if ! $(fc-list | grep -i "$font_name" >/dev/null); then
         cd /tmp
         wget -qO "$file_name.zip" "$url"
@@ -14,7 +16,6 @@ set_font() {
         cd -
     fi
 
-    echo -e "🔸 Installing $font_name font..."
     gsettings set org.gnome.desktop.interface monospace-font-name "$font_name 10"
 }
 
