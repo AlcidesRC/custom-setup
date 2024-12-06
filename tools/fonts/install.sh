@@ -20,11 +20,11 @@ set_font() {
 
 mkdir -p ~/.local/share/fonts
 
-choices=$(gum choose --no-limit "Caskaydia Cove" "Fira Mono" "JetBrains Mono" --header "Choose your preferred font")
+fonts=$(gum choose --no-limit "Caskaydia Cove" "Fira Mono" "JetBrains Mono" --header "Choose your preferred font")
 
-for choice in $choices
+for font in $fonts
 do
-  case $choice in
+  case $font in
   "Caskaydia Cove")
     set_font "CaskaydiaCove Nerd Font" "CaskaydiaCove" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/CascadiaCode.zip"
     ;;
