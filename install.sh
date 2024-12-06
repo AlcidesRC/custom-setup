@@ -10,7 +10,12 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 #---
 
-echo -e "🔸 Setup some defaults..."
+echo -e "🔸 Installing fonts..."
+source ~/.local/share/custom-setup/tools/fonts/install.sh
+
+#---
+
+echo -e "🔸 Setting some defaults..."
 source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
 source ~/.local/share/custom-setup/setup/setup-aliases.sh
 source ~/.local/share/custom-setup/setup/setup-shell.sh
@@ -19,11 +24,9 @@ source ~/.local/share/custom-setup/setup/setup-git.sh
 #---
 
 # Update OS dependency list
-sudo apt-get update >/dev/null
+
 
 source ~/.local/share/custom-setup/tools/os-related/install.sh
-
-source ~/.local/share/custom-setup/tools/fonts/install.sh
 
 choices=$(gum choose --no-limit "Docker" "LazyDocker" "LazyGit" "Typora" "Starship Terminal" --header "Choose your preferred application...")
 
