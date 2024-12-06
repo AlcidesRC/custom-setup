@@ -37,6 +37,12 @@ gum spin --spinner dot --title "🔹 Begin installation (or abort with ctrl+c)..
 echo -e "🔸 Installing Git tool..."
 sudo apt-get install -y git >/dev/null
 
+GIT_USERNAME=$(gum input --placeholder "What is your preferred user name for Git?")
+GIT_EMAIL=$(gum input --placeholder "What is your preferred email address for Git?")
+
+git config --global user.name $GIT_USERNAME
+git config --global user.email $GIT_EMAIL
+
 echo -e "🔸 Cloning repository..."
 rm -rf ~/.local/share/custom-setup
 git clone --quiet https://github.com/AlcidesRC/custom-setup.git ~/.local/share/custom-setup
