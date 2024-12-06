@@ -6,8 +6,8 @@ set_font() {
     
     if ! $(fc-list | grep -i "$font_name" >/dev/null); then
         cd /tmp
-        wget -O "$file_name.zip" "$url"
-        unzip "$file_name.zip" -d "$file_name"
+        wget -O "$file_name.zip" "$url" >/dev/null
+        unzip "$file_name.zip" -d "$file_name" >/dev/null
         cp "$file_name"/*."$file_type" ~/.local/share/fonts
         rm -rf "$file_name.zip" "$file_name"
         fc-cache
