@@ -10,37 +10,38 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 #---
 
-gum confirm "Do you want to install OS-related tools?" && source ~/.local/share/custom-setup/tools/os-related/install.sh
+source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
+source ~/.local/share/custom-setup/setup/setup-aliases.sh
+source ~/.local/share/custom-setup/setup/setup-shell.sh
+source ~/.local/share/custom-setup/setup/setup-git.sh
 
 #---
 
-gum confirm "Do you want to setup Gnome settings?" && source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
+# Update OS dependency list
+sudo apt-get update >/dev/null
 
-gum confirm "Do you want to setup shell?" && source ~/.local/share/custom-setup/setup/setup-shell.sh
+# Install mandatory tools
+source ~/.local/share/custom-setup/tools/os-related/install.sh
 
-gum confirm "Do you want to setup bash aliases?" && source ~/.local/share/custom-setup/setup/setup-aliases.sh
-
-gum confirm "Do you want to setup Git?" && source ~/.local/share/custom-setup/setup/setup-git.sh
-
-#---
-
+# Install fonts
 gum confirm "Do you want to install fonts?" && source ~/.local/share/custom-setup/tools/fonts/install.sh
 
-#---
-
-choices=$(gum choose --no-limit "LazyGit" "LazyDocker" "Docker" "Typora" "Starship Terminal" --header "Choose your preferred application...")
+# Install optional tools
+choices=$(gum choose --no-limit "Docker" "LazyDocker" "LazyGit" "Typora" "Starship Terminal" --header "Choose your preferred application...")
 
 for choice in $choices
 do
   case $choice in
-  "LazyGit")
-    source ~/.local/share/custom-setup/tools/lazygit/install.sh
+  "Docker")
+    source ~/.local/share/custom-setup/tools/docker/install.sh
     ;;
   "LazyDocker")
     source ~/.local/share/custom-setup/tools/lazydocker/install.sh
     ;;
-  "Docker")
-    source ~/.local/share/custom-setup/tools/docker/install.sh
+  "LazyGit")
+    source ~/.local/share/custom-setup/tools/lazygit/install.sh
+    ;;
+  "LazyDocker")
     source ~/.local/share/custom-setup/tools/lazydocker/install.sh
     ;;
   "Typora")
