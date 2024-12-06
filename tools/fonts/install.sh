@@ -20,7 +20,7 @@ set_font() {
 
 mkdir -p ~/.local/share/fonts
 
-choice=$(gum choose --no-limit "Caskaydia Cove" "Fira Mono" "JetBrains Mono" --header "Choose your preferred font")
+choices=$(gum choose --no-limit "Caskaydia Cove" "Fira Mono" "JetBrains Mono" --header "Choose your preferred font")
 
 for choice in $choices
 do
