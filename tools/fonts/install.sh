@@ -3,7 +3,7 @@ set_font() {
     local file_name=$2
     local file_type=$3
     local url=$4
-
+    
     if ! $(fc-list | grep -i "$font_name" >/dev/null); then
         cd /tmp
         wget -O "$file_name.zip" "$url"
@@ -20,18 +20,18 @@ set_font() {
 
 mkdir -p ~/.local/share/fonts
 
-fonts=$(gum choose --no-limit "Caskaydia Cove" "Fira Mono" "JetBrains Mono" --header "Choose your preferred application...")
+fonts=$(gum choose --no-limit "CaskaydiaCove" "FiraMono" "JetBrainsMono" --header "Choose your preferred font...")
 
 for font in $fonts
 do
   case $font in
-  "Caskaydia Cove")
+  "CaskaydiaCove")
     set_font "CaskaydiaCove Nerd Font" "CaskaydiaCove" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/CascadiaCode.zip"
     ;;
-  "Fira Mono")
+  "FiraMono")
     set_font "FiraMono Nerd Font" "FiraMono" "otf" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono.zip"
     ;;
-  "JetBrains Mono")
+  "JetBrainsMono")
     set_font "JetBrainsMono Nerd Font" "JetBrainsMono" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip"
     ;;
   esac

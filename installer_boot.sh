@@ -37,7 +37,7 @@ gum spin --spinner dot --title "🔹 Begin installation (or abort with ctrl+c)..
 echo -e "🔸 Installing Git tool..."
 sudo apt-get install -y git >/dev/null
 
-echo -e "🔸 Cloning Custom Setup..."
+echo -e "🔸 Cloning repository..."
 rm -rf ~/.local/share/custom-setup
 git clone --quiet https://github.com/AlcidesRC/custom-setup.git ~/.local/share/custom-setup
 
