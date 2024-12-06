@@ -24,7 +24,7 @@ sudo apt-get update >/dev/null
 source ~/.local/share/custom-setup/tools/os-related/install.sh
 
 # Install fonts
-gum confirm "Do you want to install fonts?" && source ~/.local/share/custom-setup/tools/fonts/install.sh
+source ~/.local/share/custom-setup/tools/fonts/install.sh
 
 # Install optional tools
 choices=$(gum choose --no-limit "Docker" "LazyDocker" "LazyGit" "Typora" "Starship Terminal" --header "Choose your preferred application...")
