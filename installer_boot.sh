@@ -5,6 +5,8 @@ ascii_art='┏┓           ┏┓
 ┗┛┗┻┛┗┗┛┛┗┗  ┗┛┗ ┗┗┻┣┛
                     ┛ '
 
+clear
+
 echo -e "$ascii_art"
 
 #---
