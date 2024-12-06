@@ -36,5 +36,5 @@ gsettings set org.gnome.mutter center-new-windows true
 gsettings set org.gnome.shell.extensions.ding show-home false
 
 # Set FiraCode Nerd Font Mono as the default monospace font
-gsettings set org.gnome.desktop.interface monospace-font-name 'FiraCode Nerd Font Mono 10'
+gsettings set org.gnome.desktop.interface monospace-font-name 'CaskaydiaCove Nerd Font Mono 10'
 

@@ -41,9 +41,11 @@ do
     ;;
   "LazyDocker")
     source ~/.local/share/custom-setup/tools/lazydocker/install.sh
+    source ~/.local/share/custom-setup/defaults/app-lazydocker.sh
     ;;
   "LazyGit")
     source ~/.local/share/custom-setup/tools/lazygit/install.sh
+    source ~/.local/share/custom-setup/defaults/app-lazygit.sh
     ;;
   "LazyDocker")
     source ~/.local/share/custom-setup/tools/lazydocker/install.sh
