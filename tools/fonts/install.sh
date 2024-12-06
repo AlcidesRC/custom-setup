@@ -4,7 +4,7 @@ set_font() {
     local file_type=$3
     local url=$4
     
-    echo -e "🔸 Installing $font_name font..."
+    echo -e "🔸 Installing $font_name..."
 
     if ! $(fc-list | grep -i "$font_name" >/dev/null); then
         cd /tmp
