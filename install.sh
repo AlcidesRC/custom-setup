@@ -53,6 +53,8 @@ choices=$(gum choose --no-limit "PhpStorm" "Docker" "LazyDocker" "LazyGit" "Typo
 
 for choice in $choices
 do
+  echo ':small_blue_diamond: {{ Color "014" "Installing '"$choice"'..." }}' | gum format -t template | gum format -t emoji
+
   case $choice in
   "PhpStorm")
     source ~/.local/share/custom-setup/tools/phpstorm/install.sh
