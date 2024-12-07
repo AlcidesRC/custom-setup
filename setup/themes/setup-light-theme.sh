@@ -6,4 +6,4 @@ gsettings set org.gnome.desktop.interface color-scheme prefer-light
 gsettings set org.gnome.desktop.interface gtk-theme Yaru-sage
 
 # Set wallpaper
-gsettings set org.gnome.desktop.background picture-uri file:///home/$USER/.local/share/custom-setup/defaults/wallpapers/light.jpg
+gsettings set org.gnome.desktop.background picture-uri file:///home/$USER/.local/share/custom-setup/defaults/wallpapers/light.png
