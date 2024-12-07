@@ -10,22 +10,17 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 #---
 
-echo ':small_blue_diamond: {{ Color "111" "Installing fonts..." }}' | gum format -t template | gum format -t emoji
-echo ''
-
-source ~/.local/share/custom-setup/tools/fonts/install.sh
-
-#---
-
 echo ':small_blue_diamond: {{ Color "111" "Setting Gnome defaults..." }}' | gum format -t template | gum format -t emoji
 echo ''
 
 source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
+source ~/.local/share/custom-setup/tools/gnome-extensions/install.sh
 
-echo ':small_blue_diamond: {{ Color "111" "Setting aliases..." }}' | gum format -t template | gum format -t emoji
+echo ':small_blue_diamond: {{ Color "111" "Setting bash aliases, profile..." }}' | gum format -t template | gum format -t emoji
 echo ''
 
 source ~/.local/share/custom-setup/setup/setup-aliases.sh
+source ~/.local/share/custom-setup/setup/setup-profile.sh
 
 echo ':small_blue_diamond: {{ Color "111" "Setting shell defaults..." }}' | gum format -t template | gum format -t emoji
 echo ''
@@ -36,6 +31,13 @@ echo ':small_blue_diamond: {{ Color "111" "Setting Git defaults..." }}' | gum fo
 echo ''
 
 source ~/.local/share/custom-setup/setup/setup-git.sh
+
+#---
+
+echo ':small_blue_diamond: {{ Color "111" "Installing fonts..." }}' | gum format -t template | gum format -t emoji
+echo ''
+
+source ~/.local/share/custom-setup/tools/fonts/install.sh
 
 #---
 
@@ -50,16 +52,13 @@ source ~/.local/share/custom-setup/defaults/app-tilix.sh
 echo ':small_blue_diamond: {{ Color "111" "Installing additional software..." }}' | gum format -t template | gum format -t emoji
 echo ''
 
-choices=$(gum choose --no-limit "GnomeExtensions" "PhpStorm" "Docker" "LazyDocker" "LazyGit" "Typora" "Starship" --header "Choose your preferred application...")
+choices=$(gum choose --no-limit "PhpStorm" "Docker" "LazyDocker" "LazyGit" "Typora" "Starship" --header "Choose your preferred application...")
 
 for choice in $choices
 do
   echo ':small_blue_diamond: {{ Color "014" "Installing '"$choice"'..." }}' | gum format -t template | gum format -t emoji
 
   case $choice in
-  "GnomeExtensions")
-    source ~/.local/share/custom-setup/tools/gnome-extensions/install.sh
-    ;;
   "PhpStorm")
     source ~/.local/share/custom-setup/tools/phpstorm/install.sh
     source ~/.local/share/custom-setup/defaults/app-phpstorm.sh
