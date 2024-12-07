@@ -80,6 +80,8 @@ do
   esac
 done
 
+echo ''
+
 #---
 
 # Revert to normal idle and lock settings
