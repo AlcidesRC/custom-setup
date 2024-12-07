@@ -50,13 +50,16 @@ source ~/.local/share/custom-setup/defaults/app-tilix.sh
 echo ':small_blue_diamond: {{ Color "111" "Installing additional software..." }}' | gum format -t template | gum format -t emoji
 echo ''
 
-choices=$(gum choose --no-limit "PhpStorm" "Docker" "LazyDocker" "LazyGit" "Typora" "Starship" --header "Choose your preferred application...")
+choices=$(gum choose --no-limit "GnomeExtensions" "PhpStorm" "Docker" "LazyDocker" "LazyGit" "Typora" "Starship" --header "Choose your preferred application...")
 
 for choice in $choices
 do
   echo ':small_blue_diamond: {{ Color "014" "Installing '"$choice"'..." }}' | gum format -t template | gum format -t emoji
 
   case $choice in
+  "GnomeExtensions")
+    source ~/.local/share/custom-setup/tools/gnome-extensions/install.sh
+    ;;
   "PhpStorm")
     source ~/.local/share/custom-setup/tools/phpstorm/install.sh
     source ~/.local/share/custom-setup/defaults/app-phpstorm.sh
