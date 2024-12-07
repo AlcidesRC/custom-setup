@@ -40,10 +40,10 @@ echo ''
 echo ':small_blue_diamond: Installing Git' | gum format -t emoji
 sudo apt-get install -y git >/dev/null
 
-GIT_USERNAME=$(gum input --placeholder "\nWhat is your preferred user name for Git?")
+GIT_USERNAME=$(gum input --placeholder "\n What is your preferred user name for Git?")
 git config --global user.name "$GIT_USERNAME"
 
-GIT_EMAIL=$(gum input --placeholder "\nWhat is your preferred email address for Git?")
+GIT_EMAIL=$(gum input --placeholder "\n What is your preferred email address for Git?")
 git config --global user.email "$GIT_EMAIL"
 
 echo ':small_blue_diamond: Clonning repository' | gum format -t emoji
