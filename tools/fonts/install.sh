@@ -21,18 +21,18 @@ set_font() {
 
 mkdir -p ~/.local/share/fonts
 
-fonts=$(gum choose --no-limit "CaskaydiaCove" "FiraMono" "JetBrainsMono" --header "Choose your preferred font...")
+fonts=$(gum choose --no-limit "Caskaydia Cove" "Fira Mono" "JetBrains Mono" --header "Choose your preferred font...")
 
 for font in $fonts
 do
   case $font in
-  "CaskaydiaCove")
+  "Caskaydia Cove")
     set_font "CaskaydiaCove Nerd Font" "CaskaydiaCove" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/CascadiaCode.zip"
     ;;
-  "FiraMono")
+  "Fira Mono")
     set_font "FiraMono Nerd Font" "FiraMono" "otf" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FiraMono.zip"
     ;;
-  "JetBrainsMono")
+  "JetBrains Mono")
     set_font "JetBrainsMono Nerd Font" "JetBrainsMono" "ttf" "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/JetBrainsMono.zip"
     ;;
   esac

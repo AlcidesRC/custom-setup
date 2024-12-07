@@ -75,7 +75,7 @@ do
     source ~/.local/share/custom-setup/tools/typora/install.sh
     ;;
   "Starthip Terminal")
-    source ~/.local/share/custom-setup/tools/terminal/install.sh
+    source ~/.local/share/custom-setup/tools/starship-rs/install.sh
     ;;
   esac
 done
