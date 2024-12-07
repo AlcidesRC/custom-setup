@@ -18,11 +18,6 @@ gsettings set org.gnome.shell.extensions.ding show-home false
 # Set CaskaydiaCove Nerd Font Mono as the default monospace font
 gsettings set org.gnome.desktop.interface monospace-font-name 'CaskaydiaCove Nerd Font Mono 10'
 
-# Prefer dark themes
-gsettings set org.gnome.shell.ubuntu color-scheme prefer-dark
-gsettings set org.gnome.desktop.interface gtk-theme Yaru-dark
-gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-
 ###
 # DOCK RELATED
 ###
