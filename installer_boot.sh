@@ -17,7 +17,7 @@ sudo apt-get update >/dev/null && sudo apt-get upgrade -y >/dev/null
 #---
 
 echo ''
-echo ':small_orange_diamond: Starting the installation' | gum format -t emoji
+echo ':small_orange_diamond: {{ Color "011" "Starting the installation" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 #---
@@ -31,24 +31,34 @@ sudo apt-get update >/dev/null && sudo apt-get install -y gum >/dev/null
 #---
 
 echo ''
-echo ':small_red_triangle: {{ Bold "Custom Setup" }} {{ Italic "is for fresh Ubuntu 24.04 installations only!" }}' | gum format -t template | gum format -t emoji
+echo ':small_red_triangle: {{ Bold "Custom Setup" }} {{ Color "011" "is for fresh Ubuntu 24.04 installations only!" }}' | gum format -t template | gum format -t emoji
 gum spin --spinner dot --title "Press Ctrl+c to abort" -- sleep 5
 echo ''
 
 #---
 
-echo ':small_blue_diamond: Installing Git' | gum format -t emoji
+echo ':small_orange_diamond: {{ Color "011" "Installing Git..." }}' | gum format -t template | gum format -t emoji
+echo ''
+
 sudo apt-get install -y git >/dev/null
 
-GIT_USERNAME=$(gum input --placeholder "\n What is your preferred user name for Git?")
+GIT_USERNAME=$(gum input --placeholder "What is your preferred user name for Git?")
 git config --global user.name "$GIT_USERNAME"
 
-GIT_EMAIL=$(gum input --placeholder "\n What is your preferred email address for Git?")
+GIT_EMAIL=$(gum input --placeholder "What is your preferred email address for Git?")
 git config --global user.email "$GIT_EMAIL"
 
-echo ':small_blue_diamond: Clonning repository' | gum format -t emoji
+#---
+
+echo ':small_orange_diamond: {{ Color "011" "Cloning repository..." }}' | gum format -t template | gum format -t emoji
+echo ''
+
 rm -rf ~/.local/share/custom-setup
 git clone --quiet https://github.com/AlcidesRC/custom-setup.git ~/.local/share/custom-setup
 
-echo ':small_blue_diamond: Starting the process' | gum format -t emoji
+#---
+
+echo ':small_orange_diamond: {{ Color "011" "Starting the process..." }}' | gum format -t template | gum format -t emoji
+echo ''
+
 source ~/.local/share/custom-setup/install.sh
