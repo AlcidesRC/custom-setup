@@ -4,4 +4,4 @@ curl -sLo lazydocker.tar.gz "https://github.com/jesseduffield/lazydocker/release
 tar -xf lazydocker.tar.gz lazydocker >/dev/null
 sudo install lazydocker /usr/local/bin >/dev/null
 rm lazydocker.tar.gz lazydocker >/dev/null
-cd -
+cd - >/dev/null
