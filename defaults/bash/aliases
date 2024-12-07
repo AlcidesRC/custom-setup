@@ -24,3 +24,4 @@ alias reload-shell='exec env -i HOME=$HOME bash -l'
 
 # Docker
 alias docker-stop-all='docker stop $(docker ps -a -q)'
+alias docker-kill-all='docker kill $(docker ps -a -q)'
