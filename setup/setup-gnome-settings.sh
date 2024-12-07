@@ -51,5 +51,5 @@ gsettings set org.gnome.shell.extensions.dash-to-dock show-trash false
 
 # Custom apps
 # ls /usr/share/applications/  ~/.local/share/applications/
-gsettings set org.gnome.shell favorite-apps "['snap-store_snap-store.desktop', 'org.gnome.Nautilus.desktop', 'firefox_firefox.desktop', 'PhpStorm.desktop', 'LazyGit.desktop', 'LazyDocker.desktop', 'typora.desktop', 'org.gnome.Terminal.desktop']"
+gsettings set org.gnome.shell favorite-apps "['snap-store_snap-store.desktop', 'org.gnome.Nautilus.desktop', 'firefox_firefox.desktop', 'PhpStorm.desktop', 'LazyGit.desktop', 'LazyDocker.desktop', 'typora.desktop', 'Tilix.desktop']"
 

@@ -43,13 +43,14 @@ echo ':small_blue_diamond: {{ Color "111" "Installing OS-related tools..." }}' |
 echo ''
 
 source ~/.local/share/custom-setup/tools/os-related/install.sh
+source ~/.local/share/custom-setup/defaults/app-tilix.sh
 
 #---
 
 echo ':small_blue_diamond: {{ Color "111" "Installing additional software..." }}' | gum format -t template | gum format -t emoji
 echo ''
 
-choices=$(gum choose --no-limit "PhpStorm" "Docker" "LazyDocker" "LazyGit" "Typora" "Starship Terminal" --header "Choose your preferred application...")
+choices=$(gum choose --no-limit "PhpStorm" "Docker" "LazyDocker" "LazyGit" "Typora" "Starship" --header "Choose your preferred application...")
 
 for choice in $choices
 do
@@ -74,7 +75,7 @@ do
   "Typora")
     source ~/.local/share/custom-setup/tools/typora/install.sh
     ;;
-  "Starthip Terminal")
+  "Starthip")
     source ~/.local/share/custom-setup/tools/starship-rs/install.sh
     ;;
   esac
