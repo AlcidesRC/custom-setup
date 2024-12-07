@@ -12,7 +12,8 @@ echo -e "$ascii_art"
 #---
 
 # Update and upgrade the OS
-sudo apt-get update >/dev/null && sudo apt-get upgrade -y >/dev/null
+sudo apt-get update >/dev/null
+sudo apt-get upgrade -y >/dev/null
 
 #---
 
