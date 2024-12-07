@@ -10,16 +10,24 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 #---
 
+echo ':small_blue_diamond: {{ Color "111" "Installing OS-related tools..." }}' | gum format -t template | gum format -t emoji
+echo ''
+
+source ~/.local/share/custom-setup/tools/os-related/install.sh
+
 echo ':small_blue_diamond: {{ Color "111" "Setting Gnome defaults..." }}' | gum format -t template | gum format -t emoji
 echo ''
 
 source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
-source ~/.local/share/custom-setup/tools/gnome-extensions/install.sh
 
-echo ':small_blue_diamond: {{ Color "111" "Setting bash aliases, profile..." }}' | gum format -t template | gum format -t emoji
+echo ':small_blue_diamond: {{ Color "111" "Setting bash aliases..." }}' | gum format -t template | gum format -t emoji
 echo ''
 
 source ~/.local/share/custom-setup/setup/setup-aliases.sh
+
+echo ':small_blue_diamond: {{ Color "111" "Setting bash profile..." }}' | gum format -t template | gum format -t emoji
+echo ''
+
 source ~/.local/share/custom-setup/setup/setup-profile.sh
 
 echo ':small_blue_diamond: {{ Color "111" "Setting shell defaults..." }}' | gum format -t template | gum format -t emoji
@@ -38,14 +46,6 @@ echo ':small_blue_diamond: {{ Color "111" "Installing fonts..." }}' | gum format
 echo ''
 
 source ~/.local/share/custom-setup/tools/fonts/install.sh
-
-#---
-
-echo ':small_blue_diamond: {{ Color "111" "Installing OS-related tools..." }}' | gum format -t template | gum format -t emoji
-echo ''
-
-source ~/.local/share/custom-setup/tools/os-related/install.sh
-source ~/.local/share/custom-setup/defaults/app-tilix.sh
 
 #---
 
