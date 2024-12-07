@@ -10,21 +10,31 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 #---
 
-echo -e "🔸 Installing fonts..."
+echo ''
+echo ':small_blue_diamond: {{ Color "111" "Installing fonts..." }}' | gum format -t template | gum format -t emoji
 source ~/.local/share/custom-setup/tools/fonts/install.sh
 
 #---
 
-echo -e "🔸 Setting some defaults..."
+echo ''
+echo ':small_blue_diamond: {{ Color "111" "Setting Gnome defaults..." }}' | gum format -t template | gum format -t emoji
 source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
+
+echo ''
+echo ':small_blue_diamond: {{ Color "111" "Setting aliases..." }}' | gum format -t template | gum format -t emoji
 source ~/.local/share/custom-setup/setup/setup-aliases.sh
+
+echo ''
+echo ':small_blue_diamond: {{ Color "111" "Setting shell defaults..." }}' | gum format -t template | gum format -t emoji
 source ~/.local/share/custom-setup/setup/setup-shell.sh
+
+echo ''
+echo ':small_blue_diamond: {{ Color "111" "Setting Git defaults..." }}' | gum format -t template | gum format -t emoji
 source ~/.local/share/custom-setup/setup/setup-git.sh
 
 #---
 
 # Update OS dependency list
-
 
 source ~/.local/share/custom-setup/tools/os-related/install.sh
 
