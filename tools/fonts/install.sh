@@ -3,8 +3,9 @@ set_font() {
     local file_name=$2
     local file_type=$3
     local url=$4
-    
-    echo -e "🔸 Installing $font_name..."
+
+    echo ':small_blue_diamond: {{ Color "014" "Installing $font_name..." }}' | gum format -t template | gum format -t emoji
+    echo ''
 
     if ! $(fc-list | grep -i "$font_name" >/dev/null); then
         cd /tmp
