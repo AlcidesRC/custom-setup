@@ -17,7 +17,7 @@ sudo apt-get update >/dev/null && sudo apt-get upgrade -y >/dev/null
 #---
 
 echo ''
-echo ':small_orange_diamond: {{ Color "011" "Starting the installation" }}' | gum format -t template | gum format -t emoji
+echo ':small_orange_diamond: {{ Color "011" "Preparing the installation" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 #---
@@ -58,8 +58,5 @@ rm -rf ~/.local/share/custom-setup
 git clone --quiet https://github.com/AlcidesRC/custom-setup.git ~/.local/share/custom-setup
 
 #---
-
-echo ':small_orange_diamond: {{ Color "011" "Starting the process..." }}' | gum format -t template | gum format -t emoji
-echo ''
 
 source ~/.local/share/custom-setup/install.sh
