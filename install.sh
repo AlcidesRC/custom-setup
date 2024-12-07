@@ -10,33 +10,44 @@ gsettings set org.gnome.desktop.session idle-delay 0
 
 #---
 
-echo ''
 echo ':small_blue_diamond: {{ Color "111" "Installing fonts..." }}' | gum format -t template | gum format -t emoji
+echo ''
+
 source ~/.local/share/custom-setup/tools/fonts/install.sh
 
 #---
 
-echo ''
 echo ':small_blue_diamond: {{ Color "111" "Setting Gnome defaults..." }}' | gum format -t template | gum format -t emoji
+echo ''
+
 source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
 
-echo ''
 echo ':small_blue_diamond: {{ Color "111" "Setting aliases..." }}' | gum format -t template | gum format -t emoji
+echo ''
+
 source ~/.local/share/custom-setup/setup/setup-aliases.sh
 
-echo ''
 echo ':small_blue_diamond: {{ Color "111" "Setting shell defaults..." }}' | gum format -t template | gum format -t emoji
+echo ''
+
 source ~/.local/share/custom-setup/setup/setup-shell.sh
 
-echo ''
 echo ':small_blue_diamond: {{ Color "111" "Setting Git defaults..." }}' | gum format -t template | gum format -t emoji
+echo ''
+
 source ~/.local/share/custom-setup/setup/setup-git.sh
 
 #---
 
-# Update OS dependency list
+echo ':small_blue_diamond: {{ Color "111" "Installing OS-related tools..." }}' | gum format -t template | gum format -t emoji
+echo ''
 
 source ~/.local/share/custom-setup/tools/os-related/install.sh
+
+#---
+
+echo ':small_blue_diamond: {{ Color "111" "Installing additional software..." }}' | gum format -t template | gum format -t emoji
+echo ''
 
 choices=$(gum choose --no-limit "PhpStorm" "Docker" "LazyDocker" "LazyGit" "Typora" "Starship Terminal" --header "Choose your preferred application...")
 
