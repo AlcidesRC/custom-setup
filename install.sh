@@ -20,7 +20,6 @@ echo ''
 
 source ~/.local/share/custom-setup/setup/setup-gnome-settings.sh
 
-
 echo ':small_blue_diamond: {{ Color "111" "Setting Gnome theme..." }}' | gum format -t template | gum format -t emoji
 echo ''
 
@@ -32,10 +31,10 @@ do
 
   case $theme in
   "DarkTheme")
-    source ~/.local/share/custom-setup/setup/setup-dark-theme.sh
+    source ~/.local/share/custom-setup/setup/themes/setup-dark-theme.sh
     ;;
   "LightTheme")
-    source ~/.local/share/custom-setup/setup/setup-light-theme.sh
+    source ~/.local/share/custom-setup/setup/themes/setup-light-theme.sh
     ;;
   esac
 done
@@ -81,17 +80,6 @@ do
   echo ':small_blue_diamond: {{ Color "014" "Installing '"$choice"'..." }}' | gum format -t template | gum format -t emoji
 
   case $choice in
-  "DarkTheme")
-    # Prefer dark theme
-    gsettings set org.gnome.shell.ubuntu color-scheme prefer-dark
-    gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-
-    # Set theme
-    gsettings set org.gnome.desktop.interface gtk-theme Yaru-purple-dark
-
-    # Set wallpaper
-    gsettings set org.gnome.desktop.background picture-uri-dark file:///home/$USER/.local/share/custom-setup/defaults/wallpapers/dark.jpg
-    ;;
   "PhpStorm")
     source ~/.local/share/custom-setup/tools/phpstorm/install.sh
     source ~/.local/share/custom-setup/defaults/app-phpstorm.sh
