@@ -1,5 +1,3 @@
-echo -e "🔸 Installing Starship terminal..."
-
 # Install Starship.rs
 curl -sS https://starship.rs/install.sh | sh -s -- --yes
 
