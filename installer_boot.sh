@@ -34,7 +34,6 @@ sudo apt-get update && sudo apt-get install -y gum
 
 echo ''
 echo ':small_red_triangle: {{ Bold "Custom Setup" }} {{ Color "202" "is for fresh Ubuntu 24.04 installations only!" }}' | gum format -t template | gum format -t emoji
-echo ''
 gum spin --spinner.foreground="202" --spinner minidot --title "Press Ctrl+C to abort..." -- sleep 5
 echo ''
 
