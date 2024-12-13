@@ -34,12 +34,12 @@ sudo apt-get update && sudo apt-get install -y gum
 
 echo ''
 echo ':small_red_triangle: {{ Bold "Custom Setup" }} {{ Color "202" "is for fresh Ubuntu 24.04 installations only!" }}' | gum format -t template | gum format -t emoji
+echo ''
 gum spin --spinner.foreground="202" --spinner minidot --title "Press Ctrl+C to abort..." -- sleep 5
 echo ''
 
 #---
 
-echo ''
 gum log --structured --level info "Installing Git..."
 echo ''
 
@@ -47,7 +47,6 @@ sudo apt-get update && sudo apt-get install -y git
 
 #---
 
-echo ''
 gum log --structured --level info "Cloning Custom Setup repository..."
 echo ''
 
@@ -56,7 +55,6 @@ git clone --quiet https://github.com/AlcidesRC/custom-setup.git ~/.local/share/c
 
 #---
 
-echo ''
 gum log --structured --level info "Starting customization..."
 echo ''
 

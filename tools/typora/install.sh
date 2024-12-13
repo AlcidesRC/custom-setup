@@ -1,4 +1,3 @@
-echo ''
 gum log --structured --level info "Installing Typora..."
 echo ''
 
