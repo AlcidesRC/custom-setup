@@ -1,4 +1,4 @@
-gum log --structured --level info "Installing StarshipRS..."
+echo ':small_orange_diamond: Installing {{ Bold "StarshipRS" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 # Install Starship.rs

@@ -1,4 +1,4 @@
-gum log --structured --level info "Setup Gnome settings..."
+echo ':small_orange_diamond: Setup {{ Bold "Gnome Settings" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 ###

@@ -1,4 +1,4 @@
-gum log --structured --level info "Setup shell..."
+echo ':small_orange_diamond: Setup {{ Bold "Shell" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 # Setup shell only once

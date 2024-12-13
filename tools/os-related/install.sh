@@ -1,4 +1,4 @@
-gum log --structured --level info "Installing OS related tools..."
+echo ':small_orange_diamond: Installing {{ Bold "OS-related tools" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 # <eza> is a <ls> replacement (see aliases for further details)

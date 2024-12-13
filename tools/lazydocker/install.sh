@@ -1,4 +1,4 @@
-gum log --structured --level info "Installing Lazy Docker..."
+echo ':small_orange_diamond: Installing {{ Bold "Lazy Docker" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 cd /tmp

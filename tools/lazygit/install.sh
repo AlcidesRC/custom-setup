@@ -1,4 +1,4 @@
-gum log --structured --level info "Installing Lazy Git..."
+echo ':small_orange_diamond: Installing {{ Bold "Lazy Git" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 cd /tmp

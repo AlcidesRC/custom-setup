@@ -1,4 +1,4 @@
-gum log --structured --level info "Installing Typora..."
+echo ':small_orange_diamond: Installing {{ Bold "Typora" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 wget -qO - https://typora.io/linux/public-key.asc | sudo tee /etc/apt/trusted.gpg.d/typora.asc

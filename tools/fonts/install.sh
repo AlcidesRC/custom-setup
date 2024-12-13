@@ -1,4 +1,4 @@
-gum log --structured --level info "Installing fonts..."
+echo ':small_orange_diamond: Installing {{ Bold "Fonts" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 set_font() {
@@ -6,8 +6,6 @@ set_font() {
     local file_name=$2
     local file_type=$3
     local url=$4
-
-    echo ':small_blue_diamond: {{ Color "014" "Installing '"$font_name"'..." }}' | gum format -t template | gum format -t emoji
 
     if ! $(fc-list | grep -i "$font_name" >/dev/null); then
         cd /tmp

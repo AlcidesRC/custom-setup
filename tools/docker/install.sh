@@ -1,4 +1,4 @@
-gum log --structured --level info "Installing Docker..."
+echo ':small_orange_diamond: Installing {{ Bold "Docker" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 # Add the official Docker repo

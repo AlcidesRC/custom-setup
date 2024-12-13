@@ -47,6 +47,7 @@ sudo apt-get update && sudo apt-get install -y git
 
 #---
 
+echo ''
 gum log --structured --level info "Cloning Custom Setup repository..."
 echo ''
 

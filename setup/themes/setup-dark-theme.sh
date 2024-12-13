@@ -1,4 +1,4 @@
-gum log --structured --level info "Setup dark theme..."
+echo ':small_orange_diamond: Setup {{ Bold "Dark Theme" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 # Set dark theme

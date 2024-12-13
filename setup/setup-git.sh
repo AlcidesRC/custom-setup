@@ -1,4 +1,4 @@
-gum log --structured --level info "Setup Git..."
+echo ':small_orange_diamond: Setup {{ Bold "Git" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 GIT_USERNAME=$(gum input --placeholder "What is your preferred user name for Git?")

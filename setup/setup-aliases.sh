@@ -1,4 +1,4 @@
-gum log --structured --level info "Setup bash aliases..."
+echo ':small_orange_diamond: Setup {{ Bold "Bash Aliases" }}' | gum format -t template | gum format -t emoji
 echo ''
 
 # Remove any previous symbolic link
