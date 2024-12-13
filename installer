@@ -1,0 +1,1 @@
+eval "$(wget --no-cache -qO- https://raw.githubusercontent.com/AlcidesRC/custom-setup/refs/heads/main/installer_boot.sh)"

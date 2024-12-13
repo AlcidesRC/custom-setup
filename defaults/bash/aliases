@@ -1,0 +1,25 @@
+# System related
+alias upgrade='sudo apt update -y && sudo apt upgrade -y && sudo snap refresh'
+
+# File-system related
+alias ls='eza -lh --group-directories-first --icons'
+alias lsa='ls -a'
+alias lt='eza --tree --level=2 --long --icons --git'
+alias lta='lt -a'
+alias ff='fzf --preview "batcat --style=numbers --color=always {}"'
+alias fd='fdfind'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+compress() { tar -czf "${1%/}.tar.gz" "${1%/}"; }
+alias decompress="tar -xzf"
+
+# Shell related
+alias shell-restart='killall -SIGQUIT gnome-shell'
+alias shell-reload='exec env -i HOME=$HOME bash -l'
+
+# Docker related
+alias docker-stop-all='docker stop $(docker ps -a -q)'
+alias docker-kill-all='docker kill $(docker ps -a -q)'

@@ -1,0 +1,4 @@
+# Setting up those extensions on .bash_profile due Gnome extensions cannot be enabled once installed
+# Need to be enabled after a reboot/logout/etc.
+gnome-extensions enable places-menu@gnome-shell-extensions.gcampax.github.com
+gnome-extensions enable system-monitor@gnome-shell-extensions.gcampax.github.com
